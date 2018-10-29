@@ -1,0 +1,16 @@
+language: android
+
+sudo: false
+
+android:
+  components:
+    # Note that the tools section appears twice on purpose as it’s required to get the newest Android SDK tools.
+    - tools
+    - platform-tools
+    - tools
+    - build-tools-27.0.3
+    - android-27
+    - extra-android-m2repository
+
+before_install:
+- yes | sdkmanager "platforms;android-27" # https://github.com/travis-ci/travis-ci/issues/8651
