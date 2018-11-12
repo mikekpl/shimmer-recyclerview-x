@@ -2,6 +2,7 @@
 
 > A custom recycler view with shimmer views to indicate that views are loading for AndroidX. This will only work if you are using AndroidX RecyclerView as a dependency.
 
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-shimmer--recyclerview--x-brightgreen.svg?style=flat-square)](https://android-arsenal.com/details/1/7302)
 [![Android Arsenal](https://img.shields.io/badge/Twitter-mike14u-blue.svg?style=popout-square)](https://www.twitter.com/mike14u)
 [![Android Arsenal](https://img.shields.io/badge/Github-mike14u-ff69b4.svg?style=popout-square)](https://github.com/mike14u)
 
