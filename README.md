@@ -1,12 +1,10 @@
-# ShimmerRecyclerView
+# ShimmerRecyclerViewX
 
 > A custom recycler view with shimmer views to indicate that views are loading for AndroidX. This will only work if you are using AndroidX RecyclerView as a dependency.
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-shimmer--recyclerview--x-brightgreen.svg?style=flat-square)](https://android-arsenal.com/details/1/7302)
 [![Android Arsenal](https://img.shields.io/badge/Twitter-mike14u-blue.svg?style=popout-square)](https://www.twitter.com/mike14u)
 [![Android Arsenal](https://img.shields.io/badge/Github-mike14u-ff69b4.svg?style=popout-square)](https://github.com/mike14u)
-
-This library is based on https://github.com/sharish/ShimmerRecyclerView for AndroidX
 
 ## Getting Started
 
@@ -21,7 +19,7 @@ repositories {
 ```
 
 ```
-implementation 'com.github.mike14u:shimmer-recyclerview-x:1.0.0'
+implementation 'com.github.mike14u:shimmer-recyclerview-x:1.0.1'
 ```
 
 ## Usage
@@ -71,7 +69,7 @@ Following are the attributes and methods to initialise the demo views.
 **XML**
 
 ```xml
-<com.mikelau.views.shimmer.ShimmerRecyclerView
+<com.mikelau.views.shimmer.ShimmerRecyclerViewX
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/shimmer_recycler_view"
         android:layout_width="match_parent"
@@ -87,8 +85,8 @@ Following are the attributes and methods to initialise the demo views.
 where ```@layout/layout_demo_grid``` refers to your sample layout that should be shown during loading spinner. Now on your activity onCreate, initialize the shimmer as below:
 
 ```java
-ShimmerRecyclerView shimmerRecycler = (ShimmerRecyclerView) findViewById(R.id.shimmer_recycler_view);
-shimmerRecycler.showShimmerAdapter();
+ShimmerRecyclerViewX shimmerRecyclerX = findViewById(R.id.shimmer_recycler_view_x);
+shimmerRecyclerX.showShimmerAdapter();
 ```
 
 ## Credits

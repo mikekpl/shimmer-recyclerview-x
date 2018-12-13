@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.mikelau.views.shimmer.ShimmerRecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.mikelau.views.shimmer.ShimmerRecyclerViewX xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/shimmer_recycler_view"
     android:layout_width="match_parent"

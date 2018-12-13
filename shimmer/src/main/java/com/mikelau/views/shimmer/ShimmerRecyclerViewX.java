@@ -26,7 +26,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.util.AttributeSet;
 
-public class ShimmerRecyclerView extends RecyclerView {
+public class ShimmerRecyclerViewX extends RecyclerView {
 
     public enum LayoutMangerType {
         LINEAR_VERTICAL, LINEAR_HORIZONTAL, GRID
@@ -43,17 +43,17 @@ public class ShimmerRecyclerView extends RecyclerView {
     private int mLayoutReference;
     private int mGridCount;
 
-    public ShimmerRecyclerView(Context context) {
+    public ShimmerRecyclerViewX(Context context) {
         super(context);
         init(context, null);
     }
 
-    public ShimmerRecyclerView(Context context, @Nullable AttributeSet attrs) {
+    public ShimmerRecyclerViewX(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs);
     }
 
-    public ShimmerRecyclerView(Context context, @Nullable AttributeSet attrs, int defStyle) {
+    public ShimmerRecyclerViewX(Context context, @Nullable AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         init(context, attrs);
     }

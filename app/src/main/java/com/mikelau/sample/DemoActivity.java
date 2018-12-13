@@ -23,13 +23,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.mikelau.sample.adapters.CardAdapter;
 import com.mikelau.sample.utils.BaseUtils;
 import com.mikelau.sample.utils.DemoConfiguration;
-import com.mikelau.views.shimmer.ShimmerRecyclerView;
+import com.mikelau.views.shimmer.ShimmerRecyclerViewX;
 
 public class DemoActivity extends AppCompatActivity {
 
     public static final String EXTRA_TYPE = "type";
 
-    private ShimmerRecyclerView shimmerRecycler;
+    private ShimmerRecyclerViewX shimmerRecycler;
     private CardAdapter mAdapter;
 
     @Override
