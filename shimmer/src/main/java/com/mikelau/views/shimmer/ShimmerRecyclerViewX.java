@@ -20,11 +20,12 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.util.AttributeSet;
+
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import android.util.AttributeSet;
 
 public class ShimmerRecyclerViewX extends RecyclerView {
 
@@ -42,6 +43,13 @@ public class ShimmerRecyclerViewX extends RecyclerView {
     private boolean mCanScroll;
     private int mLayoutReference;
     private int mGridCount;
+
+    private int mShimmerAngle;
+    private int mShimmerColor;
+    private int mShimmerDuration;
+    private float mShimmerMaskWidth;
+    private boolean isAnimationReversed;
+    private Drawable mShimmerItemBackground;
 
     public ShimmerRecyclerViewX(Context context) {
         super(context);
@@ -61,13 +69,6 @@ public class ShimmerRecyclerViewX extends RecyclerView {
     private void init(Context context, AttributeSet attrs) {
         mShimmerAdapter = new ShimmerAdapter();
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.ShimmerRecyclerView, 0, 0);
-
-        int mShimmerAngle;
-        int mShimmerColor;
-        int mShimmerDuration;
-        float mShimmerMaskWidth;
-        boolean isAnimationReversed;
-        Drawable mShimmerItemBackground;
 
         try {
             setDemoLayoutReference(a.getResourceId(R.styleable.ShimmerRecyclerView_shimmer_demo_layout, R.layout.layout_sample_view));
@@ -99,14 +100,20 @@ public class ShimmerRecyclerViewX extends RecyclerView {
             a.recycle();
         }
 
+        setupShimmerProperties();
+    }
+
+    private void setupShimmerProperties() {
         mShimmerAdapter.setShimmerAngle(mShimmerAngle);
         mShimmerAdapter.setShimmerColor(mShimmerColor);
         mShimmerAdapter.setShimmerMaskWidth(mShimmerMaskWidth);
         mShimmerAdapter.setShimmerItemBackground(mShimmerItemBackground);
         mShimmerAdapter.setShimmerDuration(mShimmerDuration);
         mShimmerAdapter.setAnimationReversed(isAnimationReversed);
+    }
 
-        showShimmerAdapter();
+    public void setBindViewHolderPlugin(BindViewHolderPlugin plugin) {
+        mShimmerAdapter.setBindViewHolderPlugin(plugin);
     }
 
     /**
