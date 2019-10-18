@@ -1,13 +1,12 @@
 /**
- *
  * Copyright 2017 Harish Sridharan
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
+ * <p>
  * http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -18,9 +17,12 @@
 package com.mikelau.views.shimmer;
 
 import android.graphics.drawable.Drawable;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class ShimmerAdapter extends RecyclerView.Adapter<ShimmerViewHolder> {
 
@@ -32,6 +34,13 @@ public class ShimmerAdapter extends RecyclerView.Adapter<ShimmerViewHolder> {
     private float mShimmerMaskWidth;
     private boolean isAnimationReversed;
     private Drawable mShimmerItemBackground;
+
+    @Nullable
+    private BindViewHolderPlugin plugin;
+
+    public ShimmerAdapter() {
+
+    }
 
     @Override
     public ShimmerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -50,6 +59,11 @@ public class ShimmerAdapter extends RecyclerView.Adapter<ShimmerViewHolder> {
 
     @Override
     public void onBindViewHolder(ShimmerViewHolder holder, int position) {
+        if (plugin != null) {
+            View rootView = holder.itemView;
+            plugin.hookToOnBindViewHolder(rootView);
+            plugin.hookToShimmerLayout(holder.getmShimmerLayout());
+        }
         holder.bind();
     }
 
@@ -88,5 +102,9 @@ public class ShimmerAdapter extends RecyclerView.Adapter<ShimmerViewHolder> {
 
     public void setAnimationReversed(boolean animationReversed) {
         this.isAnimationReversed = animationReversed;
+    }
+
+    public void setBindViewHolderPlugin(BindViewHolderPlugin plugin) {
+        this.plugin = plugin;
     }
 }

@@ -17,12 +17,18 @@
 package com.mikelau.sample;
 
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import android.view.View;
+import android.widget.LinearLayout;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.mikelau.sample.adapters.CardAdapter;
 import com.mikelau.sample.utils.BaseUtils;
 import com.mikelau.sample.utils.DemoConfiguration;
+import com.mikelau.views.shimmer.BindViewHolderPlugin;
 import com.mikelau.views.shimmer.ShimmerRecyclerViewX;
 
 public class DemoActivity extends AppCompatActivity {
@@ -57,7 +63,21 @@ public class DemoActivity extends AppCompatActivity {
 
         shimmerRecycler.setLayoutManager(layoutManager);
         shimmerRecycler.setAdapter(mAdapter);
-        shimmerRecycler.showShimmerAdapter();
+
+        BindViewHolderPlugin plugin = new BindViewHolderPlugin() {
+            @Override
+            public void hookToOnBindViewHolder(View rootView) {
+                Log.d(getClass().getSimpleName(), "hookToOnBindViewHolder");
+                resizeCellAtRuntime(rootView);
+            }
+
+            @Override
+            public void hookToShimmerLayout(View shimmerLayout) {
+                resizeCellAtRuntime(shimmerLayout);
+            }
+        };
+
+        shimmerRecycler.setBindViewHolderPlugin(plugin);
 
         shimmerRecycler.postDelayed(new Runnable() {
             @Override
@@ -65,6 +85,19 @@ public class DemoActivity extends AppCompatActivity {
                 loadCards();
             }
         }, 3000);
+    }
+
+    private void resizeCellAtRuntime(View rootView) {
+        if (rootView instanceof LinearLayout) {
+
+            DisplayMetrics displaymetrics = new DisplayMetrics();
+            getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+            //we need to display 1 and the half of the cell
+            double roundUpOffset = 0.5;
+            int oneAndAHalfOfACell = ((int) ((displaymetrics.widthPixels / 1.5f) + roundUpOffset));
+
+            rootView.getLayoutParams().width = oneAndAHalfOfACell;
+        }
     }
 
     private void loadCards() {
