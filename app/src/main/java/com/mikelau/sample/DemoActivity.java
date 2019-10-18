@@ -63,6 +63,7 @@ public class DemoActivity extends AppCompatActivity {
 
         shimmerRecycler.setLayoutManager(layoutManager);
         shimmerRecycler.setAdapter(mAdapter);
+        shimmerRecycler.showShimmerAdapter();
 
         BindViewHolderPlugin plugin = new BindViewHolderPlugin() {
             @Override

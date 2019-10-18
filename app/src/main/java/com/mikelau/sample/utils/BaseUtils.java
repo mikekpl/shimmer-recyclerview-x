@@ -17,6 +17,7 @@ package com.mikelau.sample.utils;
 
 import android.content.Context;
 import android.content.res.Resources;
+
 import androidx.annotation.StringRes;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;

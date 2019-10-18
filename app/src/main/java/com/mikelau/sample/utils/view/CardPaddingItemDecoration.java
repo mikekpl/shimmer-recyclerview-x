@@ -3,9 +3,10 @@ package com.mikelau.sample.utils.view;
 
 import android.content.Context;
 import android.graphics.Rect;
-import androidx.recyclerview.widget.RecyclerView;
 import android.util.TypedValue;
 import android.view.View;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 public class CardPaddingItemDecoration extends RecyclerView.ItemDecoration {
 

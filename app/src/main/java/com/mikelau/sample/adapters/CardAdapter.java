@@ -15,8 +15,9 @@
  */
 package com.mikelau.sample.adapters;
 
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.ViewGroup;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.mikelau.sample.models.ItemCard;
 import com.mikelau.sample.utils.BaseUtils;
