@@ -19,7 +19,7 @@ repositories {
 ```
 
 ```
-implementation 'com.github.mike14u:shimmer-recyclerview-x:1.0.1'
+implementation 'com.github.mike14u:shimmer-recyclerview-x:1.0.2'
 ```
 
 ## Usage
