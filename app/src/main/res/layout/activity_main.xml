@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
 Copyright 2017 Harish Sridharan
 
 
@@ -22,13 +21,9 @@ limitations under the License.
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
     tools:context="com.mikelau.sample.MainActivity">
-
-    <androidx.legacy.widget.Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
 
     <Button
         android:id="@+id/list_demo_button"
@@ -62,10 +57,5 @@ limitations under the License.
         android:layout_gravity="center_horizontal"
         android:minWidth="200dp"
         android:text="@string/second_grid_demo" />
-
-    <androidx.legacy.widget.Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
 
 </LinearLayout>

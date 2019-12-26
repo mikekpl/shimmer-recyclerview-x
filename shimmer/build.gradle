@@ -11,7 +11,7 @@ android {
         minSdkVersion 14
         targetSdkVersion 29
         versionCode 1
-        versionName "1.0.2"
+        versionName "1.0.3"
     }
 
     buildTypes {
@@ -23,6 +23,6 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'io.supercharge:shimmerlayout:2.1.0'
 }
