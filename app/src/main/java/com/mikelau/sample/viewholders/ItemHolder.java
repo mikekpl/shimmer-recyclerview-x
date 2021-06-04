@@ -29,6 +29,7 @@ import com.mikelau.sample.models.ItemCard;
 
 import static com.mikelau.sample.utils.BaseUtils.TYPE_GRID;
 import static com.mikelau.sample.utils.BaseUtils.TYPE_LIST;
+import static com.mikelau.sample.utils.BaseUtils.TYPE_LIST_HORIZONTAL;
 import static com.mikelau.sample.utils.BaseUtils.TYPE_SECOND_GRID;
 import static com.mikelau.sample.utils.BaseUtils.TYPE_SECOND_LIST;
 
@@ -67,6 +68,7 @@ public class ItemHolder extends RecyclerView.ViewHolder {
         int selectedLayoutResource;
         switch (type) {
             case TYPE_LIST:
+            case TYPE_LIST_HORIZONTAL:
                 selectedLayoutResource = R.layout.layout_news_card;
                 break;
             case TYPE_SECOND_LIST:

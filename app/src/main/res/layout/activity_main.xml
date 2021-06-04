@@ -34,6 +34,14 @@ limitations under the License.
         android:text="@string/list_demo" />
 
     <Button
+        android:id="@+id/list_horizontal_demo_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:minWidth="200dp"
+        android:text="@string/list_horizontal_demo" />
+
+    <Button
         android:id="@+id/grid_demo_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

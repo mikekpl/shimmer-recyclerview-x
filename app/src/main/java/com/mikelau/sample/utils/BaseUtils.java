@@ -32,45 +32,26 @@ import java.util.List;
 public class BaseUtils {
 
     public static final int TYPE_LIST = 0;
+    public static final int TYPE_LIST_HORIZONTAL = 4;
     public static final int TYPE_GRID = 1;
     public static final int TYPE_SECOND_LIST = 2;
     public static final int TYPE_SECOND_GRID = 3;
 
     private static List<ItemCard> getListCards(Resources resources) {
-        ItemCard ndtvCard = createItemCard(resources, R.string.ndtv_titletext, R.string.ndtv_image_url,
-                R.string.ndtv_subtext, R.string.ndtv_summarytext);
-
-        ItemCard opCard = createItemCard(resources, R.string.op_titletext, R.string.op_image_url,
-                R.string.op_subtext, R.string.op_summarytext);
-
-        ItemCard gotCard = createItemCard(resources, R.string.got_titletext, R.string.got_image_url,
-                R.string.got_subtext, R.string.got_summarytext);
-
-        ItemCard jetCard = createItemCard(resources, R.string.jet_titletext, R.string.jet_image_url,
-                R.string.jet_subtext, R.string.jet_summarytext);
-
-        return Arrays.asList(ndtvCard, opCard, gotCard, jetCard);
+        ItemCard pokemon1 = createItemCard(resources, R.string.pokemon_title_1, R.string.pokemon_image_1, R.string.pokemon_description_1, R.string.pokemon_summary_1);
+        ItemCard pokemon2 = createItemCard(resources, R.string.pokemon_title_2, R.string.pokemon_image_2, R.string.pokemon_description_2, R.string.pokemon_summary_2);
+        ItemCard pokemon3 = createItemCard(resources, R.string.pokemon_title_3, R.string.pokemon_image_3, R.string.pokemon_description_3, R.string.pokemon_summary_3);
+        ItemCard pokemon4 = createItemCard(resources, R.string.pokemon_title_4, R.string.pokemon_image_4, R.string.pokemon_description_4, R.string.pokemon_summary_4);
+        return Arrays.asList(pokemon1, pokemon2, pokemon3, pokemon4);
     }
 
     private static List<ItemCard> getGridCards(Resources resources) {
-        ItemCard on7 = createItemCard(resources, R.string.on7_titletext, R.string.on7_image_url,
-                R.string.on7_subtext, R.string.on7_summarytext);
-
-        ItemCard note5 = createItemCard(resources, R.string.note5_titletext, R.string.note5_image_url,
-                R.string.note5_subtext, R.string.note5_summarytext);
-
-        ItemCard pixel = createItemCard(resources, R.string.pix_titletext, R.string.pix_image_url,
-                R.string.pix_subtext, R.string.pix_summarytext);
-
-        ItemCard iphone6 = createItemCard(resources, R.string.i6_titletext, R.string.i6_image_url,
-                R.string.i6_subtext, R.string.i6_summarytext);
-
-        ItemCard moto = createItemCard(resources, R.string.moto_titletext, R.string.moto_image_url,
-                R.string.moto_subtext, R.string.moto_summarytext);
-
-        ItemCard s7 = createItemCard(resources, R.string.s7_titletext, R.string.s7_image_url,
-                R.string.s7_subtext, R.string.s7_summarytext);
-
+        ItemCard on7 = createItemCard(resources, R.string.on7_titletext, R.string.on7_image_url, R.string.on7_subtext, R.string.on7_summarytext);
+        ItemCard note5 = createItemCard(resources, R.string.note5_titletext, R.string.note5_image_url, R.string.note5_subtext, R.string.note5_summarytext);
+        ItemCard pixel = createItemCard(resources, R.string.pix_titletext, R.string.pix_image_url, R.string.pix_subtext, R.string.pix_summarytext);
+        ItemCard iphone6 = createItemCard(resources, R.string.i6_titletext, R.string.i6_image_url, R.string.i6_subtext, R.string.i6_summarytext);
+        ItemCard moto = createItemCard(resources, R.string.moto_titletext, R.string.moto_image_url, R.string.moto_subtext, R.string.moto_summarytext);
+        ItemCard s7 = createItemCard(resources, R.string.s7_titletext, R.string.s7_image_url, R.string.s7_subtext, R.string.s7_summarytext);
         return Arrays.asList(on7, note5, pixel, iphone6, s7, moto);
     }
 
@@ -79,6 +60,7 @@ public class BaseUtils {
 
         switch (type) {
             case TYPE_LIST:
+            case TYPE_LIST_HORIZONTAL:
             case TYPE_SECOND_LIST:
                 itemCards = getListCards(resources);
                 break;
@@ -98,6 +80,7 @@ public class BaseUtils {
 
         switch (configurationType) {
             case TYPE_LIST:
+            case TYPE_LIST_HORIZONTAL:
                 demoConfiguration = new DemoConfiguration();
                 demoConfiguration.setStyleResource(R.style.AppTheme);
                 demoConfiguration.setLayoutResource(R.layout.activity_list);

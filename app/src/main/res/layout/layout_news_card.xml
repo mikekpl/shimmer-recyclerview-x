@@ -49,7 +49,7 @@ limitations under the License.
                 android:paddingRight="16dp"
                 android:textColor="@color/textPrimary"
                 android:textSize="16sp"
-                tools:text="@string/got_titletext" />
+                tools:text="@string/pokemon_title_3" />
 
             <TextView
                 android:id="@+id/card_subtitle"
@@ -61,7 +61,7 @@ limitations under the License.
                 android:paddingRight="16dp"
                 android:textColor="@color/textSecondary"
                 android:textSize="14sp"
-                tools:text="@string/got_subtext" />
+                tools:text="@string/pokemon_description_3" />
 
         </LinearLayout>
 
@@ -84,7 +84,7 @@ limitations under the License.
         android:paddingRight="16dp"
         android:textColor="@color/textPrimary"
         android:textSize="14sp"
-        tools:text="@string/got_summarytext" />
+        tools:text="@string/pokemon_summary_3" />
 
 </LinearLayout>
 

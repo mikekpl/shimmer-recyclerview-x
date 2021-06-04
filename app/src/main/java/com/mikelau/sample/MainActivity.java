@@ -33,9 +33,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final Button firstListDemoButton = findViewById(R.id.list_demo_button);
+        final Button firstListHorizontalDemoButton = findViewById(R.id.list_horizontal_demo_button);
         final Button firstGridDemoButton = findViewById(R.id.grid_demo_button);
 
         createClickListener(firstListDemoButton, BaseUtils.TYPE_LIST);
+        createClickListener(firstListHorizontalDemoButton, BaseUtils.TYPE_LIST_HORIZONTAL);
         createClickListener(firstGridDemoButton, BaseUtils.TYPE_GRID);
 
         final Button secondListDemoButton = findViewById(R.id.list_second_demo_button);

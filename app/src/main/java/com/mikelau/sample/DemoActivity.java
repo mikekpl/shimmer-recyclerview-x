@@ -23,6 +23,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.mikelau.sample.adapters.CardAdapter;
@@ -61,7 +62,11 @@ public class DemoActivity extends AppCompatActivity {
         mAdapter = new CardAdapter();
         mAdapter.setType(type);
 
-        shimmerRecycler.setLayoutManager(layoutManager);
+        if (type == 4) {
+            shimmerRecycler.setDemoLayoutManager(ShimmerRecyclerViewX.LayoutMangerType.LINEAR_HORIZONTAL);
+        }
+
+        shimmerRecycler.setLayoutManager(type == 4 ? new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false) : layoutManager);
         shimmerRecycler.setAdapter(mAdapter);
         shimmerRecycler.showShimmerAdapter();
 

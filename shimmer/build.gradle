@@ -4,14 +4,12 @@ apply plugin: 'com.github.dcendents.android-maven'
 group='com.github.mike14u'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.2"
-
+    compileSdkVersion 30
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 29
+        targetSdkVersion 30
         versionCode 1
-        versionName "1.0.3"
+        versionName "1.0.4"
     }
 
     buildTypes {
@@ -23,6 +21,6 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation 'io.supercharge:shimmerlayout:2.1.0'
 }
