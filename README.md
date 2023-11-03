@@ -29,6 +29,19 @@ allprojects {
 }
 ```
 
+If you are using newer Android Studio Project structure that is using build.gradle.kts, you can instead declare inside your settings.gradle.kts:
+
+```
+dependencyResolutionManagement {
+  repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+      google()
+      mavenCentral()
+      maven (url = "https://jitpack.io")
+    }
+}
+```
+
 Add the dependency
 
 ```
