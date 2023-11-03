@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.mikelau.shimmerxsample.MainActivity">
+
+    <Button
+        android:id="@+id/list_demo_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:minWidth="200dp"
+        android:text="@string/list_demo" />
+
+    <Button
+        android:id="@+id/list_horizontal_demo_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:minWidth="200dp"
+        android:text="@string/list_horizontal_demo" />
+
+    <Button
+        android:id="@+id/grid_demo_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:minWidth="200dp"
+        android:text="@string/grid_demo" />
+
+    <Button
+        android:id="@+id/list_second_demo_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:minWidth="200dp"
+        android:text="@string/second_list_demo" />
+
+    <Button
+        android:id="@+id/grid_second_demo_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:minWidth="200dp"
+        android:text="@string/second_grid_demo" />
+
+</LinearLayout>
