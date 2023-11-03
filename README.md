@@ -114,7 +114,7 @@ where ```@layout/layout_demo_grid``` refers to your sample layout that should be
 
 ## Credits
 
-* https://github.com/mike14u - ShimmerRecyclerView support for AndroidX
+* https://github.com/mikekpl - ShimmerRecyclerView support for AndroidX
 * https://github.com/sharish - ShimmerRecyclerView for Android
 * https://github.com/veghtomi - Shimmer Layout / Original Reference
 * http://supercharge.io/ - Shimmer Layout / Original Reference
