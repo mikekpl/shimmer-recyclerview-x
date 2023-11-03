@@ -33,7 +33,7 @@ Add the dependency
 
 ```
 dependencies {
-    implementation 'com.github.mikekpl:shimmerrecyclerviewx:2.0.0'
+    implementation 'com.github.mikekpl:shimmer-recyclerview-x:2.0.0'
 }
 ```
 
